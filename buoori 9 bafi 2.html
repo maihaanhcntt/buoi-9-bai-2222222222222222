@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 2 – Menu đa cấp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+    }
+
+    .menu {
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-button {
+      background-color: #0078b6;
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submenu {
+      display: none;
+      padding-left: 15px;
+      background: #f4f4f4;
+    }
+
+    .submenu div {
+      padding: 10px;
+      border-top: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    .submenu div:hover {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Bài 2 – Tạo menu đa cấp bằng JavaScript</h1>
+
+<div class="menu">
+  <div class="menu-button" onclick="toggleMenu()">Thiết kế Web</div>
+  <div class="submenu" id="submenu">
+    <div>HTML</div>
+    <div>CSS</div>
+    <div>JavaScript</div>
+  </div>
+</div>
+
+<script>
+  function toggleMenu() {
+    var submenu = document.getElementById("submenu");
+    submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
